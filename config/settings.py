@@ -16,7 +16,7 @@ from dotenv import load_dotenv, find_dotenv
 from datetime import timedelta
 
 
-env_file = os.environ.get('CADOCR_SERVER_ENV_FILE', '.env')
+env_file = os.environ.get('CADOCR_SERVER_ENV_FILE', '.env_dev')
 print(f'CadOcr Server use env_file: {env_file}')
 load_dotenv(
     find_dotenv(env_file),

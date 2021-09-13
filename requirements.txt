@@ -1,0 +1,21 @@
+# Base tools
+pip>=20.2.4
+setuptools>=50.3.2
+wheel>=0.25.1
+
+# Django web framework
+Django~=3.2.3
+django-cors-headers~=3.7.0
+djangorestframework~=3.12.4
+djangorestframework-simplejwt~=4.6.0
+pymemcache~=3.5.0
+
+# Connector to postgres DB
+psycopg2-binary~=2.8.6
+
+# Health check
+django-health-check~=3.16.4
+
+# Deployment
+python-dotenv~=0.17.1
+whitenoise~=5.2.0
