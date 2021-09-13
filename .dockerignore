@@ -1,0 +1,13 @@
+.git/
+.idea/
+
+venv/
+.venv/
+media/
+static/
+log/
+
+.dockerignore
+.gitignore
+docker-compose.yml
+ROADMAP.md
