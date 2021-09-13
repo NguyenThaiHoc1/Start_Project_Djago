@@ -11,6 +11,16 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv, find_dotenv
+
+env_file = os.environ.get('CADOCR_SERVER_ENV_FILE', '.env')
+print(f'CadOcr Server use env_file: {env_file}')
+load_dotenv(
+    find_dotenv(env_file),
+    override=False,
+)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
