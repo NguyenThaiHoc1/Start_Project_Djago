@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     # Our Webapp
-    'cadocr_server',
+    'catalog'
 
     # Health check
     'health_check',
