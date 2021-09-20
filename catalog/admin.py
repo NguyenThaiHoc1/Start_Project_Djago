@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Book, Genre, BookInstance, Language
+from .models import Book, Genre, BookInstance, Language, Author
 # Register your models here.
 from .models import Question
 
@@ -16,6 +16,7 @@ admin.site.register(Language)
 
 
 # Define the admin class
+@admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_date')
 
