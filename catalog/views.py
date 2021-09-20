@@ -7,6 +7,8 @@ from django.views import generic
 from .models import Book, BookInstance, Author
 from .models import Question
 
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def index(request):
@@ -33,7 +35,7 @@ def results(request, question_id):
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
-
+@login_required
 def index_example(request):
     num_books = Book.objects.all().count()
     num_books_instance = BookInstance.objects.all().count()

@@ -22,15 +22,19 @@ from django.views.generic import RedirectView
 # cai này trước nghe bảo là ko nên
 from django.conf import settings
 from django.conf.urls.static import static
+import django.contrib.auth.urls as adminlogin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
 urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls'))
+]
+
+urlpatterns += [
     path('catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='catalog/', permanent=True))  # dùng để redirect view
 ]
-
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
